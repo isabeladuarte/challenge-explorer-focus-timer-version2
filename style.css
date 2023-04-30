@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    height: 80vh;
+}
+
+#timer {
+    font-size: 126px;
+    margin-bottom: 3.0rem;
+}
+
+#controls {
+    display: flex;
+    gap: 4.0rem;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#card-sounds {
+    display: grid;
+    gap: 3.2rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+#card-sounds > div {
+    width: 138px;
+    height: 152px;
+    border-radius: 2.4rem;
+    background-color: #E1E1E6;
+}
+
+#card-sounds > div:nth-child(2) {
+    background-color: #02799D;
+}
+
+#card-sounds svg {
+    margin-top: 48px;
+    margin-left: 40px;
+    cursor: pointer;
+}
