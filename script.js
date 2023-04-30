@@ -9,7 +9,10 @@ let minutesDisplay = document.querySelector('.minutes')
 let minutes = Number(minutesDisplay.textContent)
 let seconds = Number(secondsDisplay.textContent)
 
-let forest = document.querySelector('.forest')
+let forest = document.querySelector('.forest'),
+    rain = document.querySelector('.rain'),
+    cafeteria = document.querySelector('.cafeteria'),
+    fire = document.querySelector('.fire')
 
 buttonPlay.addEventListener('click', function () {
     countdown()
@@ -35,7 +38,12 @@ buttonLess.addEventListener('click', function() {
 })
 
 forest.addEventListener('click', function() {
-   let audio = new Audio('audio/Floresta.mp3') 
+   const audio = new Audio('https://github.com/isabeladuarte/challenge-explorer-focus-timer-version2/blob/master/audio/Floresta.mp3?raw=true') 
+    audio.play()
+})
+
+rain.addEventListener('click', function() {
+    const audio = new Audio('https://github.com/isabeladuarte/challenge-explorer-focus-timer-version2/blob/master/audio/Floresta.mp3?raw=true') 
     audio.play()
 })
 
