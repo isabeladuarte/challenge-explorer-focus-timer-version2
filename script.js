@@ -43,10 +43,19 @@ forest.addEventListener('click', function() {
 })
 
 rain.addEventListener('click', function() {
-    const audio = new Audio('https://github.com/isabeladuarte/challenge-explorer-focus-timer-version2/blob/master/audio/Floresta.mp3?raw=true') 
+    const audio = new Audio('https://github.com/isabeladuarte/challenge-explorer-focus-timer-version2/blob/master/audio/Chuva.mp3?raw=true') 
     audio.play()
 })
 
+cafeteria.addEventListener('click', function() {
+    const audio = new Audio('https://github.com/isabeladuarte/challenge-explorer-focus-timer-version2/blob/master/audio/Cafeteria.mp3?raw=true') 
+    audio.play()
+})
+
+fire.addEventListener('click', function() {
+    const audio = new Audio('https://github.com/isabeladuarte/challenge-explorer-focus-timer-version2/blob/master/audio/Lareira.mp3?raw=true') 
+    audio.play()
+})
 
 function updateDisplay(newMinutes, seconds) {
     newMinutes = newMinutes === undefined ? minutes : newMinutes
