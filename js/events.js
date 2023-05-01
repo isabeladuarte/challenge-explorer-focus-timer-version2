@@ -1,6 +1,6 @@
 import {
     buttonPlay,
-    buttonPause,
+    buttonStop,
     buttonMore,
     buttonLess,
     btnForest,
@@ -25,12 +25,13 @@ export default function ({
         timer.countdown()
     })
     
-    buttonPause.addEventListener('click', function() {
+    buttonStop.addEventListener('click', function() {
         timer.reset()
     })
 
     buttonMore.addEventListener('click', function() {
         minutes = minutes + 5
+        seconds = seconds + 0
         timer.updateDisplay(minutes, seconds)
     })
     
@@ -45,22 +46,38 @@ export default function ({
     })    
 
     forest.addEventListener('click', function() {
-        togglePlay(btnForest)
+        togglePlay(btnForest, forest)
     })
 
     rain.addEventListener('click', function() {
-        togglePlay(btnRain)
+        togglePlay(btnRain, rain)
     })
 
     cafeteria.addEventListener('click', function() {
-        togglePlay(btnCafeteria)
+        togglePlay(btnCafeteria, cafeteria)
     })
 
     fire.addEventListener('click', function() {
-        togglePlay(btnFire)
+        togglePlay(btnFire, fire)
     })
 
-    function togglePlay(audio) {
-        return audio.paused ? audio.play() : audio.pause();
+    function togglePlay(audio, classDiv) {
+        if(audio.paused) {
+            audio.play()
+            toggleColor(classDiv, true)
+        } else { 
+            audio.pause()
+            toggleColor(classDiv, false)
+        }
+    }
+
+    function toggleColor(classDiv, isColorWhite) {
+        if(isColorWhite){
+            classDiv.style.backgroundColor = '#02799D'
+            classDiv.classList.add('white')
+        } else {
+            classDiv.style.backgroundColor = '#E1E1E6'
+            classDiv.classList.remove('white')
+        }
     }
 }

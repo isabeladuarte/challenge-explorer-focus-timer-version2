@@ -3,6 +3,7 @@ export default function Timer({
     secondsDisplay
 }){
     let timerTimeOut
+    let minutes = Number(minutesDisplay.textContent) // Pega valor inicial
 
     function countdown() {
         timerTimeOut = setTimeout(function() {
@@ -30,6 +31,7 @@ export default function Timer({
     }
 
     function reset() {
+        updateDisplay(minutes, 0)
         clearInterval(timerTimeOut)
     }
 
