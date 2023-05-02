@@ -20,6 +20,11 @@ const btnFire = new Audio('https://github.com/isabeladuarte/challenge-explorer-f
 const secondsDisplay = document.querySelector('.seconds')
 const minutesDisplay = document.querySelector('.minutes')
 
+// Dark Mode
+const sun = document.querySelector('.sun')
+const moon = document.querySelector('.moon')
+const body = document.body
+
 export {
     buttonPlay,
     buttonStop,
@@ -34,5 +39,8 @@ export {
     cafeteria,
     fire,
     secondsDisplay,
-    minutesDisplay
+    minutesDisplay,
+    sun,
+    moon,
+    body
 } 

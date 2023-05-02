@@ -9,11 +9,51 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Dark Mode */
+
+body.dark {
+    background-color: #121214;
+}
+
+.dark #timer {
+    color: #FFFFFF;
+}
+
+.dark #controls svg path {
+    fill: #C4C4CC;
+}
+
+.dark #card-sounds > div {
+    background-color: #29292E;
+}
+
+.dark #card-sounds svg path {
+    fill: #C4C4CC;
+}
+
+.dark #card-sounds .white {
+    background-color: #0A3442;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    padding: 60px 60px 0 0;
+}
+
+nav svg {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
-    height: 100vh;
+    height: 80vh;
 }
 
 #timer {
@@ -55,6 +95,6 @@ button {
     fill: #323238;
 }
 
-#card-sounds .white svg path {
+#card-sounds .icon-white svg path {
     fill: #FFFFFF;
 }

@@ -12,7 +12,10 @@ import {
     cafeteria,
     fire,
     secondsDisplay,
-    minutesDisplay
+    minutesDisplay,
+    sun,
+    moon,
+    body
 } from './elements.js'
 
 export default function ({
@@ -20,6 +23,7 @@ export default function ({
 }) {   
     let minutes = Number(minutesDisplay.textContent)
     let seconds = Number(secondsDisplay.textContent)
+    let isDarkMode
 
     buttonPlay.addEventListener('click', function () {
         timer.countdown()
@@ -61,6 +65,14 @@ export default function ({
         togglePlay(btnFire, fire)
     })
 
+    sun.addEventListener('click', function() {
+        darkMode(sun)
+    })
+
+    moon.addEventListener('click', function() {
+        darkMode(moon)
+    })
+
     function togglePlay(audio, classDiv) {
         if(audio.paused) {
             audio.play()
@@ -74,10 +86,24 @@ export default function ({
     function toggleColor(classDiv, isColorWhite) {
         if(isColorWhite){
             classDiv.style.backgroundColor = '#02799D'
-            classDiv.classList.add('white')
+            classDiv.classList.add('icon-white')
+            isDarkMode ? classDiv.style.backgroundColor = '#0A3442' : classDiv.style.backgroundColor = '#02799D'
         } else {
             classDiv.style.backgroundColor = '#E1E1E6'
-            classDiv.classList.remove('white')
+            classDiv.classList.remove('icon-white')
+            isDarkMode ? classDiv.style.backgroundColor = '#29292E' : classDiv.style.backgroundColor = '#E1E1E6'
+        }
+    }
+
+    function darkMode(icon) {
+        if(icon === sun) {
+            body.classList.add('dark')
+            sun.classList.add('hide')
+            isDarkMode = true
+        } else {
+            body.classList.remove('dark')
+            sun.classList.remove('hide')
+            isDarkMode = false
         }
     }
 }
