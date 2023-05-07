@@ -16,6 +16,8 @@ const btnRain = new Audio('https://github.com/isabeladuarte/challenge-explorer-f
 const btnCafeteria = new Audio('https://github.com/isabeladuarte/challenge-explorer-focus-timer-version2/blob/master/audio/Cafeteria.mp3?raw=true') 
 const btnFire = new Audio('https://github.com/isabeladuarte/challenge-explorer-focus-timer-version2/blob/master/audio/Lareira.mp3?raw=true') 
 
+const volume = document.getElementById('volume')
+
 // Seconds and Minutes
 const secondsDisplay = document.querySelector('.seconds')
 const minutesDisplay = document.querySelector('.minutes')
@@ -23,7 +25,7 @@ const minutesDisplay = document.querySelector('.minutes')
 // Dark Mode
 const sun = document.querySelector('.sun')
 const moon = document.querySelector('.moon')
-const body = document.body
+const html = document.querySelector('html')
 
 export {
     buttonPlay,
@@ -42,5 +44,6 @@ export {
     minutesDisplay,
     sun,
     moon,
-    body
+    html,
+    volume
 } 
