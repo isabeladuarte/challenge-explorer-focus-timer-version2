@@ -7,68 +7,23 @@
 body {
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
-    background-color: var(--bg-background);
-}
-
-:root {
-    font-size: 62.5%;
-
-    --fc-timer: #323238;
-    --bg-card: #E1E1E6;
-    --bg-cardHover: #C9C9C9;
-    --bg-cardSelected: #02799D;
-    --bg-cardSelectedHover: #006483;
-    --bg-body: #FFF;
-    --bg-background: var(--bg-body);
-}
-
-.dark:root {
-    font-size: 62.5%;
-
-    --fc-timer: #FFF;
-    --bg-card: #29292E;
-    --bg-cardHover: #39393f;
-    --bg-cardSelected: #0A3442;
-    --bg-cardSelectedHover: #0d4253;
-    --bg-body: #FFF;
-    --bg-background: #121214;
-    --bg-gray: #C4C4CC;
-}
-
-nav {
-    display: flex;
-    justify-content: end;
-    padding: 6.0rem 6.0rem 0 0;
-}
-
-nav svg {
-    cursor: pointer;
-}
-
-.hide {
-    display: none;
 }
 
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
-    height: 80vh;
+    height: 100vh;
 }
 
 #timer {
     font-size: 126px;
     margin-bottom: 3.0rem;
-    color: var(--fc-timer);
 }
 
 #controls {
     display: flex;
     gap: 4.0rem;
-}
-
-.dark #controls svg path {
-    fill: var(--bg-gray);
 }
 
 button {
@@ -87,52 +42,19 @@ button {
     width: 138px;
     height: 152px;
     border-radius: 2.4rem;
-    background-color: var(--bg-card);
+    background-color: #E1E1E6;
     cursor: pointer;
 }
 
 #card-sounds svg {
-    margin-top: 2.4rem;
-    margin-left: 4.0rem;
+    margin-top: 48px;
+    margin-left: 40px;
 }
 
 #card-sounds svg path {
-    fill: var(--fc-timer);
+    fill: #323238;
 }
 
-.dark #card-sounds svg path {
-    fill: var(--bg-gray);
-}
-
-#card-sounds .icon-white svg path {
-    fill: var(--bg-body);
-}
-
-#card-sounds .icon-white #volume {
-    background: var(--bg-body);
-}
-
-#card-sounds .icon-white #volume::-webkit-slider-thumb {
-    background: var(--bg-body);
-}
-
-#volume {
-    background: var(--fc-timer);
-    -webkit-appearance: none;
-    outline: none;
-    margin-left: 2.4rem;
-    margin-top: 3.4rem;
-    width: 9.0rem;
-    height: .4rem;
-    border-radius: .5rem;
-}
-
-#volume::-webkit-slider-thumb {
-    -webkit-appearance: none; 
-    appearance: none;
-    width: 1.6rem;
-    height: 1.6rem; 
-    background: var(--fc-timer);
-    cursor: pointer; 
-    border-radius: 100%;
+#card-sounds .white svg path {
+    fill: #FFFFFF;
 }

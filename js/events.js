@@ -12,16 +12,11 @@ import {
     cafeteria,
     fire,
     secondsDisplay,
-    minutesDisplay,
-    sun,
-    moon,
-    volume
+    minutesDisplay
 } from './elements.js'
 
 export default function ({
-    timer,
-    darkMode,
-    sounds
+    timer
 }) {   
     let minutes = Number(minutesDisplay.textContent)
     let seconds = Number(secondsDisplay.textContent)
@@ -51,26 +46,38 @@ export default function ({
     })    
 
     forest.addEventListener('click', function() {
-        sounds.togglePlay(btnForest, forest)
+        togglePlay(btnForest, forest)
     })
 
     rain.addEventListener('click', function() {
-        sounds.togglePlay(btnRain, rain)
+        togglePlay(btnRain, rain)
     })
 
     cafeteria.addEventListener('click', function() {
-        sounds.togglePlay(btnCafeteria, cafeteria)
+        togglePlay(btnCafeteria, cafeteria)
     })
 
     fire.addEventListener('click', function() {
-        sounds.togglePlay(btnFire, fire)
+        togglePlay(btnFire, fire)
     })
 
-    sun.addEventListener('click', function() {
-        darkMode.darkMode(sun)
-    })
+    function togglePlay(audio, classDiv) {
+        if(audio.paused) {
+            audio.play()
+            toggleColor(classDiv, true)
+        } else { 
+            audio.pause()
+            toggleColor(classDiv, false)
+        }
+    }
 
-    moon.addEventListener('click', function() {
-        darkMode.darkMode(moon)
-    })
+    function toggleColor(classDiv, isColorWhite) {
+        if(isColorWhite){
+            classDiv.style.backgroundColor = '#02799D'
+            classDiv.classList.add('white')
+        } else {
+            classDiv.style.backgroundColor = '#E1E1E6'
+            classDiv.classList.remove('white')
+        }
+    }
 }
